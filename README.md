@@ -23,12 +23,31 @@
 
 To help combat what has been deemed an as *AN INDUSTRY WITHOUT AN ANSWER*, chat compAnIon is making the first model **compAnIon-v1.0** publicly available. To help facilitate reproducability we have made our model available via Hugging Face: [chatcompanion/compAnIon-v1.0](https://huggingface.co/chatcompanion/compAnIon-v1.0)
 
+### Model Overview
+**compAnIon-v1.0** is a transformer-based large language model (LLM) that was trained for child grooming text classification in gaming chat room environments. The model is a lightweight model consisting of only XYZM total parameters designed to deliver classification decision in miliseconds within 
+
+
 ### Prerequisites
 
 In order to run compAnIon-v1.0, the following installs are required: 
 * npm
   ```sh
-  npm install npm@latest -g
+from sparknlp.base import *
+from sparknlp.annotator import *
+from sparknlp.common import *
+from pyspark.sql.functions import *
+from pyspark.sql.functions import lit
+from pyspark.sql.window import Window
+from pyspark.sql.types import *
+from pyspark.ml import Pipeline
+from pyspark.ml.feature import StandardScaler, VectorAssembler, Imputer, OneHotEncoder, StringIndexer
+from pyspark.ml.linalg import Vectors, VectorUDT
+import pyspark.pandas as ps
+
+import pandas as pd
+import tensorflow as tf
+from transformers import BertTokenizer
+from transformers import TFBertModel
   ```
 
 ### Installation
