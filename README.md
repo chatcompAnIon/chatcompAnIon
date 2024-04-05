@@ -19,6 +19,7 @@
 <!-- ADD IN LATER TABLE OF CONTENTS -->
 
 <!-- GETTING STARTED -->
+<p
 ## Getting Started
 
 This is an example of how you may give instructions on setting up your project locally.
@@ -75,3 +76,4 @@ Karsyn Lee - karsyn@berkeley.edu
 This project was developed as a part of UC Berkeley's Master of Information and Data Science Capstone. We would like to thank our Capstone advisors Joyce Shen and Korin Reid for their extensive guidance and continued support.
 
 * [Choose an Open Source License](https://choosealicense.com)
+</p>
