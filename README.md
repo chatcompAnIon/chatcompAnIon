@@ -25,7 +25,7 @@ To help combat what has been deemed an as *AN INDUSTRY WITHOUT AN ANSWER*, chat 
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
+In order to run compAnIon-v1.0, the following installs are required: 
 * npm
   ```sh
   npm install npm@latest -g
