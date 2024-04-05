@@ -59,12 +59,12 @@ _Below is an example of how you can instruct your audience on installing and set
 <!-- CONTACT -->
 ## Contact
 
-Courtney Mazzulla - cleemazzulla@berkeley.edu
-Julian Rippert - jrippert@berkeley.edu
-Sunny Shin - sunnyshin@berkeley.edu
-Raymond Tang - raymond.tang@berkeley.edu
-Leon Gutierrez - leonrafael29@berkeley.edu
-Karsyn Lee - karsyn@berkeley.edu
+* Courtney Mazzulla - cleemazzulla@berkeley.edu
+* Julian Rippert - jrippert@berkeley.edu
+* Sunny Shin - sunnyshin@berkeley.edu
+* Raymond Tang - raymond.tang@berkeley.edu
+* Leon Gutierrez - leonrafael29@berkeley.edu
+* Karsyn Lee - karsyn@berkeley.edu
 
 [Project Website](https://cleemazzulla.github.io/chatcompAnIon/)
 
