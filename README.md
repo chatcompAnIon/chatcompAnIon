@@ -60,11 +60,11 @@ _Below is an example of how you can instruct your audience on installing and set
 ## Contact
 
 * [Courtney Mazzulla](https://www.linkedin.com/in/courtney-l-mazzulla/) - cleemazzulla@berkeley.edu
-* Julian Rippert] - jrippert@berkeley.edu
-* Sunny Shin] - sunnyshin@berkeley.edu
-* Raymond Tang - raymond.tang@berkeley.edu
-* Leon Gutierrez - leonrafael29@berkeley.edu
-* Karsyn Lee - karsyn@berkeley.edu
+* [Julian Rippert](https://www.linkedin.com/in/julianrippert/) - jrippert@berkeley.edu
+* [Sunny Shin](https://www.linkedin.com/in/sunnyshin1/) - sunnyshin@berkeley.edu
+* [Raymond Tang](https://www.linkedin.com/in/raymond-tang-0807aa1/) - raymond.tang@berkeley.edu
+* [Leon Gutierrez](https://www.linkedin.com/in/leongutierrez29/) - leonrafael29@berkeley.edu
+* [Karsyn Lee](https://www.linkedin.com/in/karsynlee/) - karsyn@berkeley.edu
 
 [Project Website](https://cleemazzulla.github.io/chatcompAnIon/)
 
