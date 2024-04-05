@@ -15,7 +15,7 @@
   <br />
   <a href="https://cleemazzulla.github.io/chatcompAnIon/"><strong>Visit our Webpage»</strong></a>
   <br />
-
+</p>
 <!-- ADD IN LATER TABLE OF CONTENTS -->
 
 <!-- GETTING STARTED -->
