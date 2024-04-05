@@ -35,7 +35,7 @@ However, after exhaustive ablation studies, we discovered that the inclusion of 
 
 | **Training Specs**  | **compAnIon-v1.0**    | 
 | :---         |     :---:      | 
-| Instance Size  | g5.4xlarge     | 
+| Instance Size  | NVIDIA g5.4xlarge     | 
 | GPU    | 1       | 
 | GPU Memory (GiBs)    | 24     | 
 | vCPUs    | 16       | 
