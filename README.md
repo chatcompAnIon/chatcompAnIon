@@ -24,7 +24,9 @@
 To help combat what has been deemed an as *AN INDUSTRY WITHOUT AN ANSWER*, chat compAnIon is making the first model **compAnIon-v1.0** publicly available. To help facilitate reproducability we have made our model available via Hugging Face: [chatcompanion/compAnIon-v1.0](https://huggingface.co/chatcompanion/compAnIon-v1.0)
 
 ### Model Overview
-**compAnIon-v1.0** is a transformer-based large language model (LLM) that was trained for child grooming text classification in gaming chat room environments. The model is a lightweight model consisting of only XYZM total parameters designed to deliver classification decision in miliseconds within 
+**compAnIon-v1.0** is a transformer-based large language model (LLM) that was trained for child grooming text classification in gaming chat room environments. **compAnIon-v1.0** is a lightweight model consisting of only 110,479,516 total parameters designed to deliver classification decision in miliseconds within chat room dialogues. Our model was trained on 
+
+Our team conducted exhaustise 
 
 
 ### Prerequisites
