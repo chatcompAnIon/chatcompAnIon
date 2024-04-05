@@ -49,11 +49,6 @@ _Below is an example of how you can instruct your audience on installing and set
    const API_KEY = 'ENTER YOUR API';
    ```
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-
 
 <!-- CONTACT -->
 ## Contact
