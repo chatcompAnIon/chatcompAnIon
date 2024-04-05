@@ -50,7 +50,7 @@ _Below is an example of how you can instruct your audience on installing and set
    ```
 
 ### Example run on a GPU
- ```js
+ ```python
 from transformers import AutoTokenizer, AutoModelForCausalLM
 import torch
 
