@@ -1,7 +1,4 @@
 # chatcompAnIon
-
-
-
 <br />
 <div align="center">
   <a href="https://https://github.com/chatcompAnIon/chatcompAnIon">
@@ -11,11 +8,13 @@
   <h3 align="center">Welcome to Chat CompAnIon's repo!</h3>
 
   <p align="center">
-    
-  <br />
-  <a href="https://cleemazzulla.github.io/chatcompAnIon/"><strong>Visit our Webpage»</strong></a>
-  <br />
-</p>
+    <br />
+    <a href="https://cleemazzulla.github.io/chatcompAnIon/"><strong>Visit our Webpage»</strong></a>
+    <br />
+    <br />
+  </p>
+</div>
+
 <!-- ADD IN LATER TABLE OF CONTENTS -->
 
 <!-- GETTING STARTED -->
