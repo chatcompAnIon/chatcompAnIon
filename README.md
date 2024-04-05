@@ -33,7 +33,7 @@ The model was initially designed to be trained on the chat texts in addition to 
 
 The chat texts and new features were fed into the *bert-base-uncased* encoder to build embedding representations of which the pooler output with a dimension of 768 was extracted for each conversation. This embedding representation was fed into dense neural network layers to produce an ultimate binary classification. However, after exhaustive ablation studies, we discovered that the inclusion of 1D convolution layers on top of our text embeddings acted as a much more effective automated way to extract features. As such **compAnIon-v1.0** relies solely on the convolutional filters to act as feature extractors before feeding into the dense neural network layers.
 
-| Training Spec  | compAnIon-v1.0    | 
+| **Training Spec**  | **compAnIon-v1.0**    | 
 | :---         |     :---:      | 
 | Instance Size  | g5.4xlarge     | 
 | GPU    | 1       | 
