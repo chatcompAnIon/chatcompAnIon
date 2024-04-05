@@ -31,7 +31,7 @@ To help combat what has been deemed an as *AN INDUSTRY WITHOUT AN ANSWER*, chat 
 
 In order to run compAnIon-v1.0, the following installs are required: 
 * npm
-  ```sh
+  ```python
 from sparknlp.base import *
 from sparknlp.annotator import *
 from sparknlp.common import *
