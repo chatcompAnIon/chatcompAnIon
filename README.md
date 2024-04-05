@@ -72,7 +72,4 @@ _Below is an example of how you can instruct your audience on installing and set
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-This project was developed as a part of UC Berkeley's Master of Information and Data Science Capstone. We would like to thank our Capstone advisors Joyce Shen and Korin Reid for their extensive guidance and continued support.
-
-* [Choose an Open Source License](https://choosealicense.com)
-
+This project was developed as a part of UC Berkeley's Master of Information and Data Science Capstone. We would like to thank our Capstone advisors Joyce Shen and Korin Reid for their extensive guidance and continued support. We invite to visit out cohort's projects as well: [MIDS Capstone Projects: Spring 2024](https://www.ischool.berkeley.edu/programs/mids/capstone/2024a-spring)
