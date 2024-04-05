@@ -30,24 +30,24 @@ To help combat what has been deemed an as *AN INDUSTRY WITHOUT AN ANSWER*, chat 
 ### Prerequisites
 
 In order to run compAnIon-v1.0, the following installs are required: 
-* npm
-  ```python
-from sparknlp.base import *
-from sparknlp.annotator import *
-from sparknlp.common import *
-from pyspark.sql.functions import *
-from pyspark.sql.functions import lit
-from pyspark.sql.window import Window
-from pyspark.sql.types import *
-from pyspark.ml import Pipeline
-from pyspark.ml.feature import StandardScaler, VectorAssembler, Imputer, OneHotEncoder, StringIndexer
-from pyspark.ml.linalg import Vectors, VectorUDT
-import pyspark.pandas as ps
 
-import pandas as pd
-import tensorflow as tf
-from transformers import BertTokenizer
-from transformers import TFBertModel
+  ```python
+    from sparknlp.base import *
+    from sparknlp.annotator import *
+    from sparknlp.common import *
+    from pyspark.sql.functions import *
+    from pyspark.sql.functions import lit
+    from pyspark.sql.window import Window
+    from pyspark.sql.types import *
+    from pyspark.ml import Pipeline
+    from pyspark.ml.feature import StandardScaler, VectorAssembler, Imputer, OneHotEncoder, StringIndexer
+    from pyspark.ml.linalg import Vectors, VectorUDT
+    import pyspark.pandas as ps
+    
+    import pandas as pd
+    import tensorflow as tf
+    from transformers import BertTokenizer
+    from transformers import TFBertModel
   ```
 
 ### Installation
