@@ -78,7 +78,7 @@ Our model was trained on non-grooming chat data from several sources including I
 See our [Datasets](https://github.com/chatcompAnIon/chatcompAnIon/tree/main/Datasets) folder for our pre-processed data.
 
 
-## Getting Startedz
+## Getting Started
 To help combat what has been deemed an as *AN INDUSTRY WITHOUT AN ANSWER*, chat compAnIon is making the first model **compAnIon-v1.0** publicly available. To help facilitate reproducability we have made our model available via Hugging Face: [chatcompanion/compAnIon-v1.0](https://huggingface.co/chatcompanion/compAnIon-v1.0)
 
 ### Prerequisites
@@ -138,6 +138,18 @@ outputs = model.generate(**input_ids, max_new_tokens=200)
 print(tokenizer.decode(outputs[0]))
 
    ```
+
+## Ethics and Safety
+
+## Usage and Limitations
+* Training Data
+  * The quality and diversity of the training data significantly influence the model's capabilities. Biases or gaps in the training data can lead to limitations in the model's responses.
+  * The scope of the training dataset determines the subject areas the model can handle effectively.
+
+
+## Contact
+
+
 
 <!-- CONTACT -->
 ## Contact
