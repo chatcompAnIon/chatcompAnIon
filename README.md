@@ -34,6 +34,7 @@ However, after exhaustive ablation studies and model architecture experiments we
 
 ### Technical Specs & Hardware
 <p align="center">
+  
 | **Training Specs**  | **compAnIon-v1.0**    | 
 | :---         |     :---:      | 
 | Instance Size  | NVIDIA g5.4xlarge     | 
@@ -44,6 +45,7 @@ However, after exhaustive ablation studies and model architecture experiments we
 | Instance Storage (GB)    | 1 x 600 NVMe SSD       | 
 | Network Bandwidth (Gbps)    | 25       | 
 | EBS Bandwidth (Gbps)    | 8       | 
+
 </p>
 ### Prerequisites
 
