@@ -46,6 +46,7 @@ However, after exhaustive ablation studies and model architecture experiments we
 | Network Bandwidth (Gbps)    | 25       | 
 | EBS Bandwidth (Gbps)    | 8       | 
 
+
 </p>
 ### Prerequisites
 
