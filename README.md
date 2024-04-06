@@ -140,8 +140,23 @@ print(tokenizer.decode(outputs[0]))
    ```
 
 ## Ethics and Safety
+* we did not decide what is grooming non grooming
+* no PII breaches in collection all publicly available data
 
-## Usage and Limitations
+  
+## Intended Usage 
+* predict grooming in chat rooms mainly in gaming environments
+* used a a support tool for parents, not designed to be considered as a source of truth
+* may also be used as an analytics tool to help gaming companies analyze the sentiment and content of their platforms
+* push the field of child grooming linguistic analysis into an automated way
+
+## Limitations
+* build the vbest model at predicting grooming
+* implmenting the model intolive environments entails huge responsibilities of disclosures, opt out policies, privacy policies,e tc.
+* Imbalanced data not the best representation
+* dta is stale, language is dynamic
+* 
+
 * Training Data
   * The quality and diversity of the training data significantly influence the model's capabilities. Biases or gaps in the training data can lead to limitations in the model's responses.
   * The scope of the training dataset determines the subject areas the model can handle effectively.
