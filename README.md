@@ -1,4 +1,4 @@
-# chatcompAnIon
+# chat compAnIon
 <br />
 <div align="center">
   <a href="https://https://github.com/chatcompAnIon/chatcompAnIon">
