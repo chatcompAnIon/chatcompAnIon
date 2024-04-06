@@ -86,59 +86,33 @@ To help combat what has been deemed an as *AN INDUSTRY WITHOUT AN ANSWER*, chat 
 In order to run compAnIon-v1.0, the following installs are required: 
 
   ```python
-    from sparknlp.base import *
-    from sparknlp.annotator import *
-    from sparknlp.common import *
-    from pyspark.sql.functions import *
-    from pyspark.sql.functions import lit
-    from pyspark.sql.window import Window
-    from pyspark.sql.types import *
-    from pyspark.ml import Pipeline
-    from pyspark.ml.feature import StandardScaler, VectorAssembler, Imputer, OneHotEncoder, StringIndexer
-    from pyspark.ml.linalg import Vectors, VectorUDT
-    import pyspark.pandas as ps
-    
-    import pandas as pd
-    import tensorflow as tf
-    from transformers import BertTokenizer
-    from transformers import TFBertModel
+    ! pip install -q transformers==4.17
+    !git lfs install
   ```
 
-### Installation
+### Installation & Example Run
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+Below is an example of how you can clone our repo to access our trained model and quickly run predictions from a notebook environment:
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   !git clone https://huggingface.co/chatcompanion/compAnIonv1
    ```
-3. Install NPM packages
+3. Change directories in order to access the trained weights file
    ```sh
-   npm install
+   %cd compAnIonv1
    ```
-4. Enter your API in `config.js`
+4. Import the **compAnIon-v1.0** model
    ```js
-   const API_KEY = 'ENTER YOUR API';
+   from compAnIonv1 import *
    ```
+5. Run inference
+   ```js
+   texts = ["School is so boring, I want to be a race car driver when I grow up!",
+         "I can pick you up from school tomorrow, but don't tell your parents, ok?"]
 
-### Example run on a GPU
- ```python
-from transformers import AutoTokenizer, AutoModelForCausalLM
-import torch
-
-tokenizer = AutoTokenizer.from_pretrained("databricks/dbrx-instruct", trust_remote_code=True, token="hf_YOUR_TOKEN")
-model = AutoModelForCausalLM.from_pretrained("databricks/dbrx-instruct", device_map="auto", torch_dtype=torch.bfloat16, trust_remote_code=True, token="hf_YOUR_TOKEN")
-
-input_text = "What does it take to build a great LLM?"
-messages = [{"role": "user", "content": input_text}]
-input_ids = tokenizer.apply_chat_template(messages, return_dict=True, tokenize=True, add_generation_prompt=True, return_tensors="pt").to("cuda")
-
-outputs = model.generate(**input_ids, max_new_tokens=200)
-print(tokenizer.decode(outputs[0]))
-
+   run_inference_model(texts)
    ```
-
 ## Ethics and Safety
 * we did not decide what is grooming non grooming
 * no PII breaches in collection all publicly available data
