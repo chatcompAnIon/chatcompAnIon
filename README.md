@@ -19,11 +19,10 @@
 
 <!-- GETTING STARTED -->
 
-## Getting Started
+## Model Overview
 
 To help combat what has been deemed an as *AN INDUSTRY WITHOUT AN ANSWER*, chat compAnIon is making the first model **compAnIon-v1.0** publicly available. To help facilitate reproducability we have made our model available via Hugging Face: [chatcompanion/compAnIon-v1.0](https://huggingface.co/chatcompanion/compAnIon-v1.0)
 
-### Model Overview
 **compAnIon-v1.0** is a transformer-based large language model (LLM) that was trained for child grooming text classification in gaming chat room environments. **compAnIon-v1.0** is a lightweight model consisting of only 110,479,516 total parameters designed to deliver classification decisions in milliseconds within chat room dialogues. 
 
 Predicting child grooming is an incredibly difficult NLP task, accentuated by the huge class imbalance given the rarity of publicly available grooming chat data and the omnipresence of nongrooming chat data. As such our dataset consistents of ~3% positive classes. Through a combination of up/downsampling, we arrived at a final training data mix consisting of 25% positive grooming class instances. To help combat the remaining class imbalance the model was trained using the [Binary Focal Crossentropy](https://arxiv.org/abs/1708.02002v2) loss function with a customized gamma, aimed at penalizing the model for overfitting on the easier-to-predict class. 
@@ -44,6 +43,45 @@ However, after exhaustive ablation studies and model architecture experiments we
 | Instance Storage (GB)    | 1 x 600 NVMe SSD       | 
 | Network Bandwidth (Gbps)    | 25       | 
 | EBS Bandwidth (Gbps)    | 8       | 
+
+### Model Data
+Our model was trained on non-grooming chat data from several sources including IRC Logs, Omegle, and the Chit Chats dataset. See detailed table below: 
+ <table>
+              <tr>
+                <th scope="col"> Dataset</th>
+                <th scope="col"> Sources</th>
+                <th scope="col"> # Grooming conversations</th>
+                <th scope="col"> # Non-grooming conversations</th>
+                <th scope="col"> # Total conversations</th>
+              </tr>
+              <tr>
+                <th scope="row"> PAN12 train</td>
+                <td> Perverted Justice (True positives), IRC logs (True negatives), Omegle (False positives)</td>
+                <td> 2,100</td>
+                <td> 64,000</td>
+                <td> 66,917</td>
+              </tr>
+              <tr>
+                <th scope="row"> PAN12 test</td>
+                <td> Perverted Justice (True positives), IRC logs (True negatives), Omegle (False positives)</td>
+                <td> 2,100</td>
+                <td> 64,000</td>
+                <td> 66,917</td>
+              </tr>
+              <tr>
+                <th scope="row"> PJZC</td>
+                <td> Perverted Justice (True positives)</td>
+                <td> 1,104</td>
+                <td> 0</td>
+                <td> 1,104</td>
+              </tr>
+           </table>
+
+See our [Datasets](https://github.com/chatcompAnIon/chatcompAnIon/tree/main/Datasets) folder for our pre-processed data.
+
+
+## Getting Startedz
+To help combat what has been deemed an as *AN INDUSTRY WITHOUT AN ANSWER*, chat compAnIon is making the first model **compAnIon-v1.0** publicly available. To help facilitate reproducability we have made our model available via Hugging Face: [chatcompanion/compAnIon-v1.0](https://huggingface.co/chatcompanion/compAnIon-v1.0)
 
 ### Prerequisites
 
@@ -102,41 +140,6 @@ outputs = model.generate(**input_ids, max_new_tokens=200)
 print(tokenizer.decode(outputs[0]))
 
    ```
-### Model Data
-Our model was trained on non-grooming chat data from several sources including IRC Logs, Omegle, and the Chit Chats dataset. See detailed table below: 
- <table>
-              <tr>
-                <th scope="col"> Dataset</th>
-                <th scope="col"> Sources</th>
-                <th scope="col"> # Grooming conversations</th>
-                <th scope="col"> # Non-grooming conversations</th>
-                <th scope="col"> # Total conversations</th>
-              </tr>
-              <tr>
-                <th scope="row"> PAN12 train</td>
-                <td> Perverted Justice (True positives), IRC logs (True negatives), Omegle (False positives)</td>
-                <td> 2,100</td>
-                <td> 64,000</td>
-                <td> 66,917</td>
-              </tr>
-              <tr>
-                <th scope="row"> PAN12 test</td>
-                <td> Perverted Justice (True positives), IRC logs (True negatives), Omegle (False positives)</td>
-                <td> 2,100</td>
-                <td> 64,000</td>
-                <td> 66,917</td>
-              </tr>
-              <tr>
-                <th scope="row"> PJZC</td>
-                <td> Perverted Justice (True positives)</td>
-                <td> 1,104</td>
-                <td> 0</td>
-                <td> 1,104</td>
-              </tr>
-           </table>
-
-
-See our [Datasets](https://github.com/chatcompAnIon/chatcompAnIon/tree/main/Datasets) folder for our pre-processed data.
 
 <!-- CONTACT -->
 ## Contact
