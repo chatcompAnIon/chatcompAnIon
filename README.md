@@ -24,7 +24,7 @@
 To help combat what has been deemed an as *AN INDUSTRY WITHOUT AN ANSWER*, chat compAnIon is making the first model **compAnIon-v1.0** publicly available. To help facilitate reproducability we have made our model available via Hugging Face: [chatcompanion/compAnIon-v1.0](https://huggingface.co/chatcompanion/compAnIon-v1.0)
 
 ### Model Overview
-**compAnIon-v1.0** is a transformer-based large language model (LLM) that was trained for child grooming text classification in gaming chat room environments. **compAnIon-v1.0** is a lightweight model consisting of only 110,479,516 total parameters designed to deliver classification decisions in milliseconds within chat room dialogues. Our model was trained on non-grooming chat data from several sources including IRC Logs, Omegle, and the Chit Chats dataset. Our grooming chat instances were extracted from the Perverted Justice dataset, representing ~3k conversation histories of convicted child groomers with their predators. See our [Datasets](https://github.com/chatcompAnIon/chatcompAnIon/tree/main/Datasets) folder for our pre-processed data.
+**compAnIon-v1.0** is a transformer-based large language model (LLM) that was trained for child grooming text classification in gaming chat room environments. **compAnIon-v1.0** is a lightweight model consisting of only 110,479,516 total parameters designed to deliver classification decisions in milliseconds within chat room dialogues. 
 
 Predicting child grooming is an incredibly difficult NLP task, accentuated by the huge class imbalance given the rarity of publicly available grooming chat data and the omnipresence of nongrooming chat data. As such our dataset consistents of ~3% positive classes. Through a combination of up/downsampling, we arrived at a final training data mix consisting of 25% positive grooming class instances. To help combat the remaining class imbalance the model was trained using the [Binary Focal Crossentropy](https://arxiv.org/abs/1708.02002v2) loss function with a customized gamma, aimed at penalizing the model for overfitting on the easier-to-predict class. 
 
@@ -32,6 +32,8 @@ The model was initially designed to be trained on the chat texts in addition to 
 
 However, after exhaustive ablation studies and model architecture experiments we discovered that the inclusion of 1D convolutional layers on top of our text embeddings acted as a much more effective and automated way to extract features. As such **compAnIon-v1.0** relies solely on the convolutional filters to act as feature extractors before feeding into the dense neural network layers.
 
+### Technical Specs & Hardware
+<p align="center">
 | **Training Specs**  | **compAnIon-v1.0**    | 
 | :---         |     :---:      | 
 | Instance Size  | NVIDIA g5.4xlarge     | 
@@ -42,7 +44,7 @@ However, after exhaustive ablation studies and model architecture experiments we
 | Instance Storage (GB)    | 1 x 600 NVMe SSD       | 
 | Network Bandwidth (Gbps)    | 25       | 
 | EBS Bandwidth (Gbps)    | 8       | 
-
+</p>
 ### Prerequisites
 
 In order to run compAnIon-v1.0, the following installs are required: 
@@ -100,6 +102,11 @@ outputs = model.generate(**input_ids, max_new_tokens=200)
 print(tokenizer.decode(outputs[0]))
 
    ```
+### Model Data
+Our model was trained on non-grooming chat data from several sources including IRC Logs, Omegle, and the Chit Chats dataset. See detailed table below: 
+
+
+See our [Datasets](https://github.com/chatcompAnIon/chatcompAnIon/tree/main/Datasets) folder for our pre-processed data.
 
 <!-- CONTACT -->
 ## Contact
