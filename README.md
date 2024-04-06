@@ -33,7 +33,6 @@ The model was initially designed to be trained on the chat texts in addition to 
 However, after exhaustive ablation studies and model architecture experiments we discovered that the inclusion of 1D convolutional layers on top of our text embeddings acted as a much more effective and automated way to extract features. As such **compAnIon-v1.0** relies solely on the convolutional filters to act as feature extractors before feeding into the dense neural network layers.
 
 ### Technical Specs & Hardware
-<p align="center">
   
 | **Training Specs**  | **compAnIon-v1.0**    | 
 | :---         |     :---:      | 
@@ -46,8 +45,6 @@ However, after exhaustive ablation studies and model architecture experiments we
 | Network Bandwidth (Gbps)    | 25       | 
 | EBS Bandwidth (Gbps)    | 8       | 
 
-
-</p>
 ### Prerequisites
 
 In order to run compAnIon-v1.0, the following installs are required: 
@@ -107,6 +104,36 @@ print(tokenizer.decode(outputs[0]))
    ```
 ### Model Data
 Our model was trained on non-grooming chat data from several sources including IRC Logs, Omegle, and the Chit Chats dataset. See detailed table below: 
+ <table>
+              <tr>
+                <th scope="col"> Dataset</th>
+                <th scope="col"> Sources</th>
+                <th scope="col"> # Grooming conversations</th>
+                <th scope="col"> # Non-grooming conversations</th>
+                <th scope="col"> # Total conversations</th>
+              </tr>
+              <tr>
+                <th scope="row"> PAN12 train</td>
+                <td> Perverted Justice (True positives), IRC logs (True negatives), Omegle (False positives)</td>
+                <td> 2,100</td>
+                <td> 64,000</td>
+                <td> 66,917</td>
+              </tr>
+              <tr>
+                <th scope="row"> PAN12 test</td>
+                <td> Perverted Justice (True positives), IRC logs (True negatives), Omegle (False positives)</td>
+                <td> 2,100</td>
+                <td> 64,000</td>
+                <td> 66,917</td>
+              </tr>
+              <tr>
+                <th scope="row"> PJZC</td>
+                <td> Perverted Justice (True positives)</td>
+                <td> 1,104</td>
+                <td> 0</td>
+                <td> 1,104</td>
+              </tr>
+           </table>
 
 
 See our [Datasets](https://github.com/chatcompAnIon/chatcompAnIon/tree/main/Datasets) folder for our pre-processed data.
