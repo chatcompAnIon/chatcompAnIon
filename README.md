@@ -113,32 +113,20 @@ Below is an example of how you can clone our repo to access our trained model an
 
    run_inference_model(texts)
    ```
+   
 ## Ethics and Safety
-* we did not decide what is grooming non grooming
-* no PII breaches in collection all publicly available data
-
+* The team did not conduct any new labeling of our dataset as to avoid imputing our own biases as to what constitutes child grooming. All of our positive class grooming instances stem from grooming chat logs used as evidence in successful court convictions of sexual predators.
+* This model is intended to be a tool for parents to help detect and mitigate digital child grooming. We acknowledge there is a real impact of misclassification such as false positives potentially leading to damaged parent and child relationships in addition to unintended potential consequences for the falses accused.
   
 ## Intended Usage 
-* predict grooming in chat rooms mainly in gaming environments
-* used a a support tool for parents, not designed to be considered as a source of truth
-* may also be used as an analytics tool to help gaming companies analyze the sentiment and content of their platforms
-* push the field of child grooming linguistic analysis into an automated way
+* The model's intended use case is to predict child grooming in chat rooms. It is intended to be used as a supportive tool for parents and not to be considered a source of truth.
+* However, we do believe there may be multiple other use cases, especially within the Trust & Safety space companies may explore. For instance, companies with chat environments may benefit from using such a model along with any sentiment analysis to monitor their chat rooms.
+* We also believe this model sets the foundation for encoding child grooming and linguistic analysis into AI models. Further research into feature extraction from text specifically as it relates to child grooming will help push this domain forward.
 
 ## Limitations
-* build the vbest model at predicting grooming
-* implmenting the model intolive environments entails huge responsibilities of disclosures, opt out policies, privacy policies,e tc.
-* Imbalanced data not the best representation
-* dta is stale, language is dynamic
-* 
-
-* Training Data
-  * The quality and diversity of the training data significantly influence the model's capabilities. Biases or gaps in the training data can lead to limitations in the model's responses.
-  * The scope of the training dataset determines the subject areas the model can handle effectively.
-
-
-## Contact
-
-
+* **compAnIon-v1.0** is primarily trained in the English language, it will not generalize well to other languages without additional training. 
+* Our model was trained to predict on a token window size of 400. Chats and conversations may vary in length and as such the model's reliability might become constrained when running on extensive long conversations.
+* Language is ever-changing, especially among children. The model may perform poorly if there are shifts in grooming stages and their representation in linguistic syntax. 
 
 <!-- CONTACT -->
 ## Contact
