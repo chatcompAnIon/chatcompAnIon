@@ -95,19 +95,19 @@ In order to run compAnIon-v1.0, the following installs are required:
 Below is an example of how you can clone our repo to access our trained model and quickly run predictions from a notebook environment:
 
 1. Clone the repo
-   ```sh
+   ```python
    !git clone https://huggingface.co/chatcompanion/compAnIonv1
    ```
 3. Change directories in order to access the trained weights file
-   ```sh
+   ```python
    %cd compAnIonv1
    ```
 4. Import the **compAnIon-v1.0** model
-   ```js
+   ```python
    from compAnIonv1 import *
    ```
 5. Run inference
-   ```js
+   ```python
    texts = ["School is so boring, I want to be a race car driver when I grow up!",
          "I can pick you up from school tomorrow, but don't tell your parents, ok?"]
 
