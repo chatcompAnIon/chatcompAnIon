@@ -1,7 +1,7 @@
 # chat compAnIon
 <br />
 <div align="center">
-  <a href="https://https://github.com/chatcompAnIon/chatcompAnIon">
+  --<a href="https://https://github.com/chatcompAnIon/chatcompAnIon">
     <img src="images/Chat Companion Logo.png" alt="Logo" width="400" height="400">
   </a>
 
