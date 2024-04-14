@@ -53,14 +53,14 @@ Our model was trained on non-grooming chat data from several sources including I
                 <th scope="col"> # Total conversations</th>
               </tr>
               <tr>
-                <th scope="row"> PAN12 train</td>
+                <th scope="row"> PAN12 Train</td>
                 <td> Perverted Justice (True positives), IRC logs (True negatives), Omegle (False positives)</td>
                 <td> 2,015</td>
                 <td> 65,992</td>
                 <td> 68,007</td>
               </tr>
               <tr>
-                <th scope="row"> PAN12 test</td>
+                <th scope="row"> PAN12 Test</td>
                 <td> Perverted Justice (True positives), IRC logs (True negatives), Omegle (False positives)</td>
                 <td> 3,723</td>
                 <td> 153,262</td>
@@ -77,7 +77,7 @@ Our model was trained on non-grooming chat data from several sources including I
 
   <dl>
                   <dt><strong>PAN12:</strong></dt> 
-                      <dd>Put together as part of a 2012 competition to analyze sexual predators and identify high risk text.</dd><br>
+                      <dd>Put together as part of a 2012 competition to analyze sexual predators and identify high risk text.</dd>
                    <dt><strong>PJZC:</strong></dt>
                       <dd>Milon-Flores and Cordeiro put together PJZC using the same method as PAN12, but with newer data. Because PAN12-train was already imbalanced, we decided to use just the grooming conversations for training.</dd>
                   <br>
