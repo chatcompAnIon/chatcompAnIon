@@ -45,44 +45,43 @@ However, after exhaustive ablation studies and model architecture experiments we
 ### Model Data
 Our model was trained on non-grooming chat data from several sources including IRC Logs, Omegle, and the Chit Chats dataset. See detailed table below: 
  <table>
-              <tr>
-                <th scope="col"> Dataset</th>
-                <th scope="col"> Sources</th>
-                <th scope="col"> # Grooming conversations</th>
-                <th scope="col"> # Non-grooming conversations</th>
-                <th scope="col"> # Total conversations</th>
-              </tr>
-              <tr>
-                <th scope="row"> PAN12 Train</td>
-                <td> Perverted Justice (True positives), IRC logs (True negatives), Omegle (False positives)</td>
-                <td> 2,015</td>
-                <td> 65,992</td>
-                <td> 68,007</td>
-              </tr>
-              <tr>
-                <th scope="row"> PAN12 Test</td>
-                <td> Perverted Justice (True positives), IRC logs (True negatives), Omegle (False positives)</td>
-                <td> 3,723</td>
-                <td> 153,262</td>
-                <td> 156,985</td>
-              </tr>
-              <tr>
-                <th scope="row"> PJZC</td>
-                <td> Perverted Justice (True positives)</td>
-                <td> 1,104</td>
-                <td> 0</td>
-                <td> 1,104</td>
-              </tr>
-           </table>
+  <tr>
+    <th scope="col">Dataset</th>
+    <th scope="col">Sources</th>
+    <th scope="col"># Grooming conversations</th>
+    <th scope="col"># Non-grooming conversations</th>
+    <th scope="col"># Total conversations</th>
+  </tr>
+  <tr>
+    <th scope="row">PAN12 Train</th>
+    <td>Perverted Justice (True positives), IRC logs (True negatives), Omegle (False positives)</td>
+    <td style="text-align: center;">2,015</td>
+    <td style="text-align: center;">65,992</td>
+    <td style="text-align: center;">68,007</td>
+  </tr>
+  <tr>
+    <th scope="row">PAN12 Test</th>
+    <td>Perverted Justice (True positives), IRC logs (True negatives), Omegle (False positives)</td>
+    <td style="text-align: center;">3,723</td>
+    <td style="text-align: center;">153,262</td>
+    <td style="text-align: center;">156,985</td>
+  </tr>
+  <tr>
+    <th scope="row">PJZC</th>
+    <td>Perverted Justice (True positives)</td>
+    <td style="text-align: center;">1,104</td>
+    <td style="text-align: center;">0</td>
+    <td style="text-align: center;">1,104</td>
+  </tr>
+</table>
 
   <dl>
-                  <dt><strong>PAN12:</strong></dt> 
-                      <dd>Put together as part of a 2012 competition to analyze sexual predators and identify high risk text.</dd>
-                   <dt><strong>PJZC:</strong></dt>
-                      <dd>Milon-Flores and Cordeiro put together PJZC using the same method as PAN12, but with newer data. Because PAN12-train was already imbalanced, we decided to use just the grooming conversations for training.</dd>
-                  <br>
-                   <dt><strong>NOTE:</strong> There is no overlap between PAN12 and PJZC; PJZC conversations from the Perverted Justice are from 2013-2014.</dt>
-               </dl>
+  <dt><strong>PAN12:</strong></dt> 
+  <dd>Put together as part of a 2012 competition to analyze sexual predators and identify high risk text.</dd>
+  <dt><strong>PJZC:</strong></dt>
+  <dd>Milon-Flores and Cordeiro put together PJZC using the same method as PAN12, but with newer data. Because PAN12-train was already imbalanced, we decided to use just the grooming conversations for training.</dd>
+<dt><strong>NOTE:</strong> There is no overlap between PAN12 and PJZC; PJZC conversations from the Perverted Justice are from 2013-2014.</dt>
+</dl>
 
 See our [Datasets](https://github.com/chatcompAnIon/chatcompAnIon/tree/main/Datasets) folder for our pre-processed data.
 
