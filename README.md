@@ -21,13 +21,13 @@
 
 ## Model Overview
 
-**compAnIonv1** is a transformer-based large language model (LLM) that was trained for child grooming text classification in gaming chat room environments. **compAnIonv1** is a lightweight model consisting of only 110,479,516 total parameters designed to deliver classification decisions in milliseconds within chat room dialogues. 
+**compAnIonv1** is a transformer-based large language model (LLM) trained for child grooming text classification in gaming chat room environments. It is a lightweight model with only 110,479,516 total parameters designed to deliver classification decisions in milliseconds within chat room dialogues. 
 
-Predicting child grooming is an incredibly difficult NLP task, accentuated by the huge class imbalance given the rarity of publicly available grooming chat data and the omnipresence of nongrooming chat data. As such our dataset consistents of ~3% positive classes. Through a combination of up/downsampling, we arrived at a final training data mix consisting of 25% positive grooming class instances. To help combat the remaining class imbalance the model was trained using the [Binary Focal Crossentropy](https://arxiv.org/abs/1708.02002v2) loss function with a customized gamma, aimed at penalizing the model for overfitting on the easier-to-predict class. 
+Predicting child grooming is an incredibly complex NLP task, further complicated by the significant class imbalance due to the scarcity of publicly available grooming chat data and the prevalence of nongrooming chat data. Our dataset, therefore, consists of ~3% positive classes. Through a combination of up/downsampling, we managed to achieve a final training data mix consisting of 25% positive grooming class instances. To address the remaining class imbalance, the model was trained using the [Binary Focal Crossentropy](https://arxiv.org/abs/1708.02002v2) loss function with a customized gamma, aimed at penalizing the model for overfitting on the easier-to-predict class. 
 
-The model was initially designed to be trained on the chat texts in addition to new features engineered from linguistic analysis within the field of child grooming. As child grooming (especially in digital chats) often follows a [lifecycle of stages](https://safechild.org/understanding-grooming/) such as (building trust, isolating the child, etc.) we were able to capture and extract such features through various techniques such as through homegrown Bag of Words type models. The chat texts concatonated with the newly extracted grooming stages features were fed into the *bert-base-uncased* encoder to build embedding representations. The pooler output of the BERT model with a dimension of 768 was extracted for each conversation. This embedding representation was fed into dense neural network layers to produce an ultimate binary classification output. 
+The model was initially designed to be trained on the chat texts, but it also adapts to new features engineered from linguistic analysis within the field of child grooming. As child grooming (especially in digital chats) often follows a [lifecycle of stages](https://safechild.org/understanding-grooming/) such as (building trust, isolating the child, etc.) we were able to capture and extract such features through various techniques such as through homegrown Bag of Words type models. The chat texts concatenated with the newly extracted grooming stages features were fed into the bert-base-uncased encoder to build embedding representations. The pooler output of the BERT model with a dimension of 768 was extracted for each conversation. This embedding representation was fed into dense neural network layers to produce an ultimate binary classification output. 
 
-However, after exhaustive ablation studies and model architecture experiments we discovered that the inclusion of 1D convolutional layers on top of our text embeddings acted as a much more effective and automated way to extract features. As such **compAnIonv1** relies solely on the convolutional filters to act as feature extractors before feeding into the dense neural network layers.
+However, after exhaustive ablation studies and model architecture experiments, we discovered that including 1D convolutional layers on top of our text embeddings was a much more effective and automated way to extract features. As such, **compAnIonv1** relies solely on the convolutional filters to act as feature extractors before feeding into the dense neural network layers.
 
 ### Technical Specs & Hardware
   
@@ -123,17 +123,17 @@ Below is an example of how you can clone our repo to access our trained model an
    ```
    
 ## Ethics and Safety
-* The team did not conduct any new labeling of our dataset as to avoid imputing our own biases as to what constitutes child grooming. All of our positive class grooming instances stem from grooming chat logs used as evidence in successful court convictions of sexual predators.
-* This model is intended to be a tool for parents to help detect and mitigate digital child grooming. We acknowledge there is a real impact of misclassification such as false positives potentially leading to damaged parent and child relationships in addition to unintended potential consequences for the falses accused.
+* The team did not conduct any new labeling of our dataset to avoid imputing our biases regarding what constitutes child grooming. All of our positive class grooming instances stem from grooming chat logs used as evidence in successful court convictions of sexual predators.
+* This model is intended to be a tool for parents to help detect and mitigate digital child grooming. We acknowledge the real impact of misclassification, such as false positives potentially damaging parent-child relationships and unintended potential consequences for the false accused.
   
 ## Intended Usage 
-* The model's intended use case is to predict child grooming in chat rooms. It is intended to be used as a supportive tool for parents and not to be considered a source of truth.
-* However, we do believe there may be multiple other use cases, especially within the Trust & Safety space companies may explore. For instance, companies with chat environments may benefit from using such a model along with any sentiment analysis to monitor their chat rooms.
-* We also believe this model sets the foundation for encoding child grooming and linguistic analysis into AI models. Further research into feature extraction from text specifically as it relates to child grooming will help push this domain forward.
+* The model's intended use case is to predict child grooming in chat room conversations. It is intended to be a supportive tool for parents and is not to be considered a source of truth.
+* However, there may be multiple other use cases, especially within the Trust & Safety space companies may explore. For instance, companies with chat environments may benefit from using such a model along with sentiment analysis to monitor their chat rooms. Additionally, we believe this model will lend itself well to niche detection use cases such as elderly scam prevention and cyberbullying. 
+* This model paves the way for incorporating child grooming detection and linguistic analysis into AI models. However, to truly propel this field forward, we recognize the necessity for continued research, particularly in the area of feature extraction from text as it pertains to child grooming.
 
 ## Limitations
-* **compAnIonv1** is primarily trained in the English language, it will not generalize well to other languages without additional training. 
-* Our model was trained to predict on a token window size of 400. Chats and conversations may vary in length and as such the model's reliability might become constrained when running on extensive long conversations.
+* **compAnIonv1** is primarily trained on English text; it will only generalize well to other languages with additional training. 
+* Our model was trained to predict based on a token window size of 400. Conversations may vary in length, so the model's reliability might become constrained when running on extensively long conversations.
 * Language is ever-changing, especially among children. The model may perform poorly if there are shifts in grooming stages and their representation in linguistic syntax. 
 
 <!-- CONTACT -->
@@ -152,4 +152,4 @@ Below is an example of how you can clone our repo to access our trained model an
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-This project was developed as a part of UC Berkeley's Master of Information and Data Science Capstone. We would like to thank our Capstone advisors Joyce Shen and Korin Reid for their extensive guidance and continued support. We also invite you to visit out cohort's projects as well: [MIDS Capstone Projects: Spring 2024](https://www.ischool.berkeley.edu/programs/mids/capstone/2024a-spring)
+This project was developed as a part of UC Berkeley's Master of Information and Data Science Capstone. We thank our Capstone advisors, Joyce Shen and Korin Reid, for their extensive guidance and continued support. We also invite you to visit our cohort's projects as well: [MIDS Capstone Projects: Spring 2024](https://www.ischool.berkeley.edu/programs/mids/capstone/2024a-spring)
