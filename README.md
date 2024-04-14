@@ -87,7 +87,7 @@ See our [Datasets](https://github.com/chatcompAnIon/chatcompAnIon/tree/main/Data
 
 
 ## Getting Started
-To help combat what has been deemed an as *AN INDUSTRY WITHOUT AN ANSWER*, chat compAnIon is making the first model **compAnIon-v1.0** publicly available. To help facilitate reproducability we have made our model available via Hugging Face: [chatcompanion/compAnIon-v1.0](https://huggingface.co/chatcompanion/compAnIon-v1.0)
+To help combat what has been deemed an as *AN INDUSTRY WITHOUT AN ANSWER*, chat compAnIon is making the first model **compAnIonv1** publicly available. To help facilitate reproducability we have made our model available via Hugging Face: [chatcompanion/compAnIon-v1.0](https://huggingface.co/chatcompanion/compAnIon-v1.0)
 
 ### Prerequisites
 
@@ -110,7 +110,7 @@ Below is an example of how you can clone our repo to access our trained model an
    ```python
    %cd compAnIonv1
    ```
-4. Import the **compAnIon-v1.0** model
+4. Import the **compAnIonv1** model
    ```python
    from compAnIonv1 import *
    ```
@@ -132,7 +132,7 @@ Below is an example of how you can clone our repo to access our trained model an
 * We also believe this model sets the foundation for encoding child grooming and linguistic analysis into AI models. Further research into feature extraction from text specifically as it relates to child grooming will help push this domain forward.
 
 ## Limitations
-* **compAnIon-v1.0** is primarily trained in the English language, it will not generalize well to other languages without additional training. 
+* **compAnIonv1** is primarily trained in the English language, it will not generalize well to other languages without additional training. 
 * Our model was trained to predict on a token window size of 400. Chats and conversations may vary in length and as such the model's reliability might become constrained when running on extensive long conversations.
 * Language is ever-changing, especially among children. The model may perform poorly if there are shifts in grooming stages and their representation in linguistic syntax. 
 
