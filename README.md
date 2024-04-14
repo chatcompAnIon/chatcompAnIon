@@ -75,6 +75,15 @@ Our model was trained on non-grooming chat data from several sources including I
               </tr>
            </table>
 
+  <dl>
+                  <dt><strong>PAN12:</strong></dt> 
+                      <dd>Put together as part of a 2012 competition to analyze sexual predators and identify high risk text.</dd><br>
+                   <dt><strong>PJZC:</strong></dt>
+                      <dd>Milon-Flores and Cordeiro put together PJZC using the same method as PAN12, but with newer data. Because PAN12-train was already imbalanced, we decided to use just the grooming conversations for training.</dd>
+                  <br>
+                   <dt><strong>NOTE:</strong> There is no overlap between PAN12 and PJZC; PJZC conversations from the Perverted Justice are from 2013-2014.</dt>
+               </dl>
+
 See our [Datasets](https://github.com/chatcompAnIon/chatcompAnIon/tree/main/Datasets) folder for our pre-processed data.
 
 
