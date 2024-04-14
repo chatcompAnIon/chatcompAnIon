@@ -21,17 +21,17 @@
 
 ## Model Overview
 
-**compAnIon-v1.0** is a transformer-based large language model (LLM) that was trained for child grooming text classification in gaming chat room environments. **compAnIon-v1.0** is a lightweight model consisting of only 110,479,516 total parameters designed to deliver classification decisions in milliseconds within chat room dialogues. 
+**compAnIonv1** is a transformer-based large language model (LLM) that was trained for child grooming text classification in gaming chat room environments. **compAnIonv1** is a lightweight model consisting of only 110,479,516 total parameters designed to deliver classification decisions in milliseconds within chat room dialogues. 
 
 Predicting child grooming is an incredibly difficult NLP task, accentuated by the huge class imbalance given the rarity of publicly available grooming chat data and the omnipresence of nongrooming chat data. As such our dataset consistents of ~3% positive classes. Through a combination of up/downsampling, we arrived at a final training data mix consisting of 25% positive grooming class instances. To help combat the remaining class imbalance the model was trained using the [Binary Focal Crossentropy](https://arxiv.org/abs/1708.02002v2) loss function with a customized gamma, aimed at penalizing the model for overfitting on the easier-to-predict class. 
 
 The model was initially designed to be trained on the chat texts in addition to new features engineered from linguistic analysis within the field of child grooming. As child grooming (especially in digital chats) often follows a [lifecycle of stages](https://safechild.org/understanding-grooming/) such as (building trust, isolating the child, etc.) we were able to capture and extract such features through various techniques such as through homegrown Bag of Words type models. The chat texts concatonated with the newly extracted grooming stages features were fed into the *bert-base-uncased* encoder to build embedding representations. The pooler output of the BERT model with a dimension of 768 was extracted for each conversation. This embedding representation was fed into dense neural network layers to produce an ultimate binary classification output. 
 
-However, after exhaustive ablation studies and model architecture experiments we discovered that the inclusion of 1D convolutional layers on top of our text embeddings acted as a much more effective and automated way to extract features. As such **compAnIon-v1.0** relies solely on the convolutional filters to act as feature extractors before feeding into the dense neural network layers.
+However, after exhaustive ablation studies and model architecture experiments we discovered that the inclusion of 1D convolutional layers on top of our text embeddings acted as a much more effective and automated way to extract features. As such **compAnIonv1** relies solely on the convolutional filters to act as feature extractors before feeding into the dense neural network layers.
 
 ### Technical Specs & Hardware
   
-| **Training Specs**  | **compAnIon-v1.0**    | 
+| **Training Specs**  | **compAnIonv1**    | 
 | :---         |     :---:      | 
 | Instance Size  | NVIDIA g5.4xlarge     | 
 | GPU    | 1       | 
@@ -55,16 +55,16 @@ Our model was trained on non-grooming chat data from several sources including I
               <tr>
                 <th scope="row"> PAN12 train</td>
                 <td> Perverted Justice (True positives), IRC logs (True negatives), Omegle (False positives)</td>
-                <td> 2,100</td>
-                <td> 64,000</td>
-                <td> 66,917</td>
+                <td> 2,015</td>
+                <td> 65,992</td>
+                <td> 68,007</td>
               </tr>
               <tr>
                 <th scope="row"> PAN12 test</td>
                 <td> Perverted Justice (True positives), IRC logs (True negatives), Omegle (False positives)</td>
-                <td> 2,100</td>
-                <td> 64,000</td>
-                <td> 66,917</td>
+                <td> 3,723</td>
+                <td> 153,262</td>
+                <td> 156,985</td>
               </tr>
               <tr>
                 <th scope="row"> PJZC</td>
